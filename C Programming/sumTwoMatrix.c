@@ -1,4 +1,9 @@
-/* Addition of Two Matrix (50x50) */
+/* Addition of Two Matrix (50x50) 
+
+By Sagar Nandy (ADMIN) 
+https://nandysagar.in/
+
+ */
 
 
 #include <stdio.h>
