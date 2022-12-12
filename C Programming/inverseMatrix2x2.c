@@ -21,12 +21,15 @@ int main(void) {
   printf("\n");
   printf("----------------------------- \n");
 
-  printf(" Enter the 2x2 elements of matricx : \n");
+  printf(" Enter the 2x2 elements of matricx  \n");
+  printf("----------------------------- \n");
+
 
   // read input
 
   for (i = 0; i < 2; i++) {
     for (j = 0; j < 2; j++) {
+      printf("element - [%d],[%d] : ",i,j);
       scanf("%d", &A[i][j]);
     }
   }
