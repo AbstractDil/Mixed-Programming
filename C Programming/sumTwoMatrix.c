@@ -10,7 +10,7 @@ https://nandysagar.in/
 
 int main()
 {
-  int A[50][50],B[50][50],C[50][50],i,j,r,m,n;
+  int A[50][50],B[50][50],C[50][50],i,j,m,n;
   
        printf("\n\nAddition of two Matrices :\n");
        printf("------------------------------\n");  
@@ -23,6 +23,8 @@ int main()
    printf("\n\n");
 
        printf("Enter elements of  A matrix :\n");
+       printf("------------------------------\n"); 
+
        for(i=0;i<m;i++) //  row
         {
             for(j=0;j<n;j++) // column
@@ -35,6 +37,8 @@ int main()
    printf("\n\n");
 
        printf("Enter elements of  B matrix :\n");
+       printf("------------------------------\n"); 
+
        for(i=0;i<m;i++)
         {
             for(j=0;j<n;j++)
@@ -44,6 +48,8 @@ int main()
             }
         }    
    printf("\n A matrix is :\n");
+  printf("------------------------------\n"); 
+
   for(i=0;i<m;i++)
     {
       printf("\n\t");
@@ -55,6 +61,8 @@ int main()
 
   
   printf("\n B matrix is :\n");
+  printf("------------------------------\n"); 
+
   for(i=0;i<m;i++)
     {
       printf("\n\t");
@@ -68,8 +76,10 @@ int main()
        for(j=0;j<n;j++)
             C[i][j]=A[i][j]+B[i][j];
    printf("\nThe Addition of two matrix is : \n");
+    printf("------------------------------\n"); 
+
    for(i=0;i<m;i++){
-       printf("\n");
+       printf("\n\t");
        for(j=0;j<n;j++)
             printf("%d\t",C[i][j]);
    }
