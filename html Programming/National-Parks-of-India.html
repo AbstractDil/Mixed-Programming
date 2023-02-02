@@ -12,7 +12,7 @@
     </style>
     <style>
         body {
-            background-color: #03795c;
+            background-color: #314440;
             color: #fff;
         }
 
@@ -38,6 +38,9 @@
             }
 
             #hide-print{
+                display: none;
+            }
+            #footer{
                 display: none;
             }
         }
@@ -534,13 +537,24 @@
 
 
         <div class="text-center">
-            <button onclick="myPrint()" class="btn btn-default"  id="hide-print">Print</button>
+            <button onclick="myPrint()" class="btn btn-default"  id="hide-print">
+
+                <span class="glyphicon glyphicon-print"></span>
+                
+                Print</button>
         </div>
 
 
     </div>
 
     <!-- content ends -->
+
+    <footer class="text-center" id="footer" style="margin-top: 3rem;">
+        <p class="text-muted">
+            Developed by <a href="https://nandysagar.in">Sagar Nandy</a>
+        </p>
+
+    </footer>
 
 
     <script>
