@@ -36,6 +36,10 @@
                 opacity: 0.2;
                 transform: rotate(-45deg);
             }
+
+            #hide-print{
+                display: none;
+            }
         }
 
         body,
@@ -526,10 +530,24 @@
 
 
 
+        <div class="text-center">
+            <button onclick="myPrint()" class="btn btn-default"  id="hide-print">Print</button>
+        </div>
+
 
     </div>
 
     <!-- content ends -->
+
+
+    <script>
+        function myPrint() {
+            window.print();
+        }
+
+
+        
+    </script>
 
 </body>
 
