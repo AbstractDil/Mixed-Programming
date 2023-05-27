@@ -9,7 +9,7 @@ if(window.location.href.indexOf('?') == -1) {
 //get the parameter from url
 
 var url = new URL(window.location.href);
-var isOrg = url.searchParams.get("Org");
+var isOrg = url.searchParams.get("OrgID");
 
 // get parameter from url after & symbol
 
