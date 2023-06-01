@@ -1,11 +1,13 @@
 
 // Add OrgID and PoweredBy in the url automatically
 
+if(window.location.href.indexOf('?') == -1) {
+
 var url = window.location.href;
 var newUrl = url + '?OrgID=SBC&PoweredBy=nandysagar.in';
 window.history.pushState('data', 'Title', newUrl);
 console.log(newUrl);
-
+}
 
 
 // if url is not get any parameter then it will redirect to home page
