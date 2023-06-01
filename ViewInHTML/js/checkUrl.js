@@ -1,3 +1,13 @@
+
+// Add OrgID and PoweredBy in the url automatically
+
+var url = window.location.href;
+var newUrl = url + '?OrgID=SBC&PoweredBy=nandysagar.in';
+window.history.pushState('data', 'Title', newUrl);
+console.log(newUrl);
+
+
+
 // if url is not get any parameter then it will redirect to home page
 
 
@@ -22,4 +32,7 @@ var isPoweredBy = url.searchParams.get("PoweredBy");
 if(isOrg != 'SBC' || isPoweredBy != 'nandysagar.in') {
     window.location.href = 'error_url.html';
 }
+
+
+
 
