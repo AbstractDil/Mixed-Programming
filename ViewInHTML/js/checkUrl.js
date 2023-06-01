@@ -32,7 +32,11 @@ var isPoweredBy = url.searchParams.get("PoweredBy");
 //if parameter is not equal to the value then it will redirect to home page
 
 if(isOrg != 'SBC' || isPoweredBy != 'nandysagar.in') {
+    
+    alert('You have entered wrong url.');
     window.location.href = 'error_url.html';
+   
+
 }
 
 
