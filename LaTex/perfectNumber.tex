@@ -1,0 +1,496 @@
+\documentclass[12pt,,a4paper]{book}
+\usepackage{unicode-math}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+
+\usepackage{siunitx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{txfonts}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------
+%header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,LO]{{\large Perfect Number}} 
+\fancyfoot[CE,CO]{\thepage{}}
+
+
+
+%------------------------------------
+% Create Title & Author 
+\title{\textbf{Perfect Number}}
+\author{\textbf{Under the guidance of Dr. Rajib Mukherjee }}
+
+%--------------------------------------
+% Remove blank page from doc %
+\let\cleardoublepage=\clearpage
+
+% Remove blank page from doc ends % 
+
+
+
+%===========================================
+% begin
+\begin{document}
+
+
+%-------------------------------------
+% Title Start 
+\begin{titlepage}
+    
+
+\onecolumn
+
+\begin{center}
+
+
+
+
+\textbf{\fontsize{33}{\baselineskip}\selectfont MURSHIDABADH}
+
+\bigskip
+\bigskip
+
+
+\textbf{\fontsize{33}{\baselineskip}\selectfont UNIVERSITY}
+\bigskip
+
+\bigskip
+\bigskip
+\bigskip
+
+\textbf{\fontsize{20}{\baselineskip}\selectfont Deparment of Mathematics }
+
+
+\bigskip
+\bigskip
+
+
+\bigskip
+
+
+
+\bigskip
+\bigskip
+
+\textbf{\fontsize{22}{\baselineskip}\selectfont PERFECT NUMBER}
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\textit{\textbf{\fontsize{17}{\baselineskip}\selectfont by}}
+
+\bigskip
+
+\bigskip
+
+\bigskip
+
+\textbf{\fontsize{20}{\baselineskip}\selectfont Triparna Sarkar }
+
+\bigskip
+
+\bigskip
+
+
+
+\bigskip
+
+\textbf{\fontsize{17}{\baselineskip}\selectfont M.Sc 4th Semester Project }
+\bigskip
+\bigskip
+
+\textbf{\fontsize{16}{\baselineskip}\selectfont Project Supervisor }
+
+\bigskip
+
+\bigskip
+
+\textbf{\fontsize{17}{\baselineskip}\selectfont Dr. Rajib Mukherjee  }
+
+
+
+
+\bigskip
+
+\bigskip
+
+{\today}
+\end{center}
+
+\clearpage
+\end{titlepage}
+
+%-------------------------------------------------------------------
+
+
+
+%--------------------------------------
+% Actknowledgement Start
+\section*{Acknowledgement}
+%\thispagestyle{empty}
+\section*{}
+I am very grateful to our \textbf{”Department of Mathematics,Murshidabad
+University”} and our Head of Department \textbf{Dr. Rajib Mukherjee}.
+I am specially thankful to our respected teacher \textbf{Dr. Rajib Mukherjee} sir for
+giving me a chance to write on this topic and give me suggestion and
+corrected my mistakes which was a great help for improvement of my
+presentation.
+I also thankful to our respected teacher \textbf{Abhijit Sen} for teaching us Latex
+and help me to make this project.
+
+%-----------------------------------------------
+
+% Table of Content start
+
+\tableofcontents
+\clearpage
+% Table of content Ends
+
+%--------------------------------------------------
+% font size
+
+ \fontsize{14pt}{10pt}\selectfont
+
+%-------------------------------------------------
+% Chapter - Perfect Number
+ 
+\chapter*{Perfect Number}
+\section{Introduction}
+The story of perfect numbers began over twenty-three hundred years ago. The Greek mathematician Euclidean around 300 BC founded the study of perfect numbers.\par
+	In number theory, a perfect number is a  positive integer that is equal to the sum of its positive divisors, excluding the number itself. For example, 6 has divisors 1,2,3, and 1+2+3=6. So 6 is a perfect number. Here we can not take 6 as the divisor of 6. By number theory, we know about the "Sum of divisor function" denoted by   $\sigma(n)$   and defined as the sum of all positive divisors of n. For example,  For example,  
+
+$\sigma(28) = 1 + 2 + 4 + 7 + 14 + 28 = 56$. But for a perfect number, we can't take the given number as its divisor. Like if we take 28 then 28 will be the perfect number if 1+2+4+7+14=28.\para
+If we consider n to be a divisor of itself we call n perfect if all of its divisor is 2n. 
+%-----------  Photo-1 Start ------------------
+\begin{center}
+    \includegraphics[width=9cm]{photo-1.jpeg}
+\end{center}
+%-----------  Photo-1  End ------------------
+
+\newline
+\bigskip
+So, we can define the perfect number as- 
+\section{Definition}
+Let,$n \in \mathbb{N}$ 
+ such that,  $\sigma(n) = 21$
+ , Then we where  $\sigma(n)$ is the sum of divisor function. Say that n is a perfect number.
+\subsection{Mersenne Prime and Even Perfect Number}
+The first individual categorization of the Perfect number was observed by the Greek mathematician Euclid. \newline
+He notices that the first four perfect numbers are of a specific form: \newline
+
+6 &= 2^1(1+2) = 2 \cdot 3 \\
+ 28 &= 2^2(1+2+2^2) = 4 \cdot 7 \\
+496 &= 2^3(1+2+2^2+2^3+2^4) = 16 \cdot 31 \\
+8128 &= 2^6(1+2+2^2+2^3+2^4+2^5+2^6) = 64 \cdot 127
+
+Notice though, that the number 
+$90 = 2^3(1 + 2 + 2^2 + 2^3) = 8.15$
+ and 
+$2016 = 2^5(1 + 2 + \ldots + 2^5) = 32.63$
+ are missing forms of this sequence. As Euclid pointed out, this is because 
+$15 = 3.5$      and     $63 = 3^{2}.7$
+ are both composite numbers whereas the numbers 3,7,31,127 are all prime. So, from this observation Euclid's theorem is arrived.
+
+
+%-----------  Photo-2 Start ------------------
+\begin{center}
+    \includegraphics[width=9cm]{photo-2.jpeg}
+\end{center}
+%-----------  Photo-2  End ------------------
+
+\subsection*{Theorem-1:(Euclid)}
+\textbf{Statement}: The equation is \(N = 2^{p-1} \cdot (2^p-1)\) is an  perfect number when \(2^{P-1}\) is prime.
+
+\textbf{Proof}: clearly the only prime divisors of N are, \(2^{p-1}\) and 2. Since \(2^{p-1}\) occurs as a single prime, we have \(\sigma(2^p-1) = (1 + (2^p-1)) = 2^p\) and thus, 
+\(\sigma(N) = \sigma(2^p-1) = \frac{{2^p - 1}}{{2-1}}\), \(2^p = 2^p (2^p-1) = 2N\)
+
+Therefore, N is the perfect perfect number.
+
+Some Examples of perfect numbers given below  as the result of the theorem.
+\vspace{20pt}
+
+%---------------------------------------
+% Tabular
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{p} & \textbf{2\textsuperscript{p-1}} & \textbf{2\textsuperscript{p-1} = (2-1)(2\textsuperscript{p-1})(2\textsuperscript{p-2})+1} & \textbf{2\textsuperscript{p-1}} \\
+\hline
+1 & 1 & 1 & x \\
+\hline
+2 & 2 & 3 & 6 \\
+\hline
+3 & 4 & 7 & 28 \\
+\hline
+4 & 8 & 15 & x \\
+\hline
+5 & 16 & 31 & 496 \\
+\hline
+6 & 32 & 63 & x \\
+\hline
+7 & 64 & 127 & 81128 \\
+\hline
+8 & 128 & 255 & x \\
+\hline
+9 & 256 & 511 & x \\
+\hline
+10 & 512 & 1023 & x \\
+\hline
+11 & 1024 & 2047 & x \\
+\hline
+12 & 2048 & 4095 & x \\
+\hline
+13 & 4096 & 8191 & 33 , 550, 336 \\
+\hline
+\end{tabular}
+
+\vspace{20pt}
+\newline 
+
+ A prime number of form \(2^{P-1}\) are known as Mensenne Primes'. But there is a condition in it. \(2^{P-1}\) is prime for p=2,3,11,13,17.....
+\testvbf{Note:} For \(2^{P-1}\) to be prime it is necessary that p itself be a prime.\\
+\textbf{Proof}: we know from before, $x^{p-1} = (x-1)(x^{p-1} + \ldots + x + 1)$ let us assume, p=rs where (\(r, s > 1\)) then, \\
+ \(2^p-1 = (2^r)^{s-1}+\ldots+2^r+1\) which implies that, \(\frac{{2^r-1}}{{2^p-1}}\)  which is prime, a contradiction. But the converse is not true. i.e, not all number of the form \(2^{p-1}\) with a prime pare prime. \\
+For example, \(2^{11}-1=2047=23 \times 89\) is not prime. \\
+Thus the study of prime of the form \(2^{p-1}\) began. The Singularity of the subject of Mensenne Primes are even perfect number has been realized by mathematics as 1000 AD but it was until 18 th century that Euler provided a bejection between the Mersenne Prime and even perfect numbers. That is to say, due to Eulor's result we have a complete description as all even perfect number. \\ \vspace{20pt}
+
+\subsection*{Theorem-2: (Euler)} \\
+\textbf{Statement}: If N is an even perfect number, then N
+can be written in the form N = 2^{(n-1)} (2^n-1) where  \(2^{n-1}\) is prime. \\ \vspace{10pt}
+\textbf{Proof}: Let, \(N = 2^{n-1}m\) be perfect, where m is add; since, 2  does divide m, it is relatively prime to\(2^{n-1}\) and  \(\sigma(N) = \sigma(2^{n-1}m) = \sigma(2^{n-1})\sigma(m) = \frac{{2^n-1}}{{2-1}} \sigma(m) = (2^n-1) \sigma(m)\)  \\
+ N is perfect so \(\sigma(N) = 2N = 2(2^{n-1} \times m) = 2^n \times m\) and with the above, 
+\(2^n m = (2^n-1) \sigma (m)\). \\
+let, \(S=\sigma(m)\). We then have \(m=(2^n-1) \left(\frac{S}{2^n}\right)\); Since, \(2^n\) does not divide \(2^{n-1}\), it must divide s as m is an integer. So that, \(m = (2^n-1)q\) for some \(q = \frac{s}{2^n}\) . \\
+If \(q = 1\) we have a number of Euclid's type for then \(m = 2^n - 1\) and \(m = 2^n - 1\) must be a prime and \(N = 2^n \cdot m = 2^{n-1} \cdot (2^n-1)\). \\
+ If \(q > 1\) we retatal the sum of the divisor of\(m = ((2^n) - 1) \cdot q\). The factors of m then inclide 1, \(q\), and \(2^n - 1\) and n itself. So that, \\
+ \(S = \sigma(m) \geq 1 + 9(2^n-1)+(2^n-1)9 =((2^n-1) +1)(9+1) = 2^n(9+1)\)\\
+ But this implies, 
+\(\frac{m}{5} = \frac{(2^n-1)q}{2^n(q+1)} = \frac{(2^n -1)}{2^n} \cdot \frac{q}{q+1} < \frac{(2^n -1)}{2^n}\) an impossibility  for we have  previously established equality \(\sigma(n) = 2^m = (a+1)(2^n-1)\) implies that, \(\frac{m}{s} = \frac{2^n-1}{2^n}\). \\ Hence, the theorem is proved. \\ 
+\vspace{10pt}
+
+Perfect number have Some properties we state and proof the properties as follows: \\
+\vspace{10pt}
+\subsection*{Theorem-3:}\\
+ \textbf{Statement:} If N is even perfect number then N is triangular number.
+ 
+\textbf{Proof:}  we have m triangular if \(m\) = $\sum\limits_{i=1}^{k-1} i = 1 + 2 + \ldots + k = \frac{1}{2}k(k-1)$ for some k. Here N is a perfect number and\(N = 2^{(n-1)}(2^n-1) = \frac{{2^n((2^n)-1)}}{2} = k(k+1)\) where \(k = 2^n-1\).\\
+\vspace{10pt}
+
+\textbf{Corollary:}  If  T is a perfect  number, the  $32T + 4$ is a perfect square.
+ 
+
+\textbf{Proof:} T is a perfect number and, we know the T  is a triangular number.\\
+
+So,\(T \frac{(k+1)k}{2}\); for some positive integer K.\\
+
+Now,\\
+
+\(32T+4 = \frac{32(k+1)k}{2} + 4\) \\
+
+ = \(16k^2 + 16k + 4\)
+
+ = \((4k)^2 + 2 \cdot 4 \cdot 2k + 2^2\)
+
+= \((4k+2)^2\)
+\vspace{10pt}\\
+
+\subsection*{Theorem-4:}
+\textbf{statement:} The sum of the reciprocals of the factor of a perfect number N is equals to 2.
+
+\textbf{Proof:} Let, N is a perfect number so \(N = 2^{(n-1)}(2^n-1)\) and \(p = 2^n-1\).
+
+Now, the factors of \(2^{(n-1)}\) are \(1, 2^1, 2^2, 2^3, \ldots, 2^{(n-1)}\) and the other factors are \(p, 2p, 2^2 \cdot p, 2^{(n-1)} \cdot p\).  Sum of the reciprocals of factors of \(2^{(n-1)}\) . \\
+$1 + \frac{1}{2} + \frac{\frac{1}{2^2}}{\frac{1}{2^3}} + \ldots + \frac{1}{2^{(n-1)}}$
+
+= $\frac{2^{n-1}}{2^{n-1}} + \frac{2^{n-1}}{2^2 \cdot 2^{n-1}} + \frac{2^{n-1}}{2^3 \cdot 2^{n-1}} + \ldots + \frac{1}{2^{n-1}}$
+
+=  $\frac{2^{n-1}}{2^{n-1}} + \frac{2^{n-1} \cdot 2^{-1}}{2^{n-1}} + \frac{2^{n-1} \cdot 2^{-2}}{2^{n-1}} + \ldots + \frac{1}{2^{n-1}}$
+
+=  $\frac{2^{n-1}}{2^{n-1}} + \frac{2^{n-1}}{2^{n-1}} + \frac{2^{n-3}}{2^{n-1}} + \ldots + \frac{1}{2^{n-1}}$
+
+= $\frac{{2^{n-1} + 2^{n-2} + 2^{n-3} + \ldots + 1}}{{2^{n-1}}}$
+= $\frac{{2^n - 1}}{{2^{n-1}}}$
+
+=$\frac{P}{2^{n-1}}$
+------------(1)\\
+\vspace{10pt}
+sum of the reciprocals of other factors--
+$1/P + \frac{1}{2P} + \frac{1}{2^2 \cdot P} + \ldots + \frac{1}{2^{(n-1)} \cdot P}$
+
+= $\frac{1}{P}\left[1 + \frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + \ldots + \frac{1}{2^{(n-1)}}\right]$
+
+Similarly we get , \\
+$\frac{1}{P} \cdot \frac{P}{2^{n-1}} = \frac{1}{2^{n-1}}$
+
+-----------(2)\\
+Now the sum of the reciprocal of all factors is equal to -\\
+$\frac{P}{2^{n-1}} + \frac{1}{2^{n-1}} = \frac{P+1}{2^{n-1}}$
+
+= \((2^n - 1 + 1) / 2^{(n - 1)}\)
+
+= \(2^n / 2^{(n-1)}\)
+=\(2\)
+Thus, the proof is completed.\\
+
+\textbf{example-1:} Apply theorem 4 for \(N = 6\).\\
+or,\(N = 6 = 2^{2-1} \cdot (2^2 - 1)\)
+
+divisor of  \(2^1 = 2{,}1\) \\
+and the other divisors are \(1 \cdot (2^2 - 1) = 3\)
+ and \(2 \cdot (2^2 - 1) = 6\)
+
+Now,\(1 + \frac{1}{2} = \frac{3}{2}\)
+
+and \(\frac{1}{3} + \frac{1}{6} = \frac{1}{2}\)
+
+so,  \(\frac{3}{2} + \frac{1}{2} = \frac{4}{2} = 2\).\\
+
+\subsection*{Theorem-5:}
+\textbf{Statement:}  If n is a perfect number such that \(N = 2^{n-1}(2^n-1)\)
+ then the product of the positive divisor's of n is equal to\(N^n\) \\
+.
+
+\textbf{Proof:}  Given,\(N = 2^{n-1}(2^n-1)\)  and let,\(p = 2^{n-1}\) and it is prime. The \(N = 2^{n-1}\)
+ .Now the factors of \(2^n\) are \(1, 2, 2^2, 2^3, \ldots, 2^{n-1}\) and  the other factors are \(P, 2P, 2^2P, 2^3P, \ldots, 2^{n-1}P\). \\
+Product of the factors  of \(2^{n-1}\) are  \(1, 2, 2^2, 2^3, \ldots, 2^{n-1}\)
+
+= \(2^{1+2+3+4+\ldots+(n-1)}\)
+
+= \(2^{\frac{n(n-1)}{2}}\)
+
+product of the other factors, \\
+\(P, 2P, 2^2P, \ldots, 2^{n-1}P\)
+
+=\((P^n) \cdot \{1, 2, 2^2, \ldots, 2^{n-1}\}\)
+
+= \((P^n) \cdot 2^{\frac{n(n-1)}{2}}\)
+
+Therefore the product of the two factors,\\
+\([2^{\frac{n(n-1)}{2}}] \cdot [(P^n) \cdot 2^{\frac{n(n-1)}{2}}]\)
+
+=\([2^{\frac{n(n-1)}{2}}] \cdot (P^n)\)
+
+ = \([{2^{n-1} \cdot P}]^n\)
+
+ = \(N^n\).\\
+
+ \textbf{Example - 2:} Apply theorem 5 to \(N = 28\). 
+
+\(N = 28 = 2^{3-1}(2^3-1) = 2^2(2^3-1)\)
+
+
+factors of 28 are \(N = 28 = 2^{3-1}(2^3-1) = 2^2(2^3-1)\)
+
+
+The products of the factors of \(28 = 1 \times 2 \times 4 \times 7 \times 14 \times 28\)
+
+\(= 21,952\)
+
+
+\(= 28^3\).\\
+
+\subsection*{Theorem 6:}
+\textbf{Statement:} Every even perfect number ends in either 6 or 8.
+
+\textbf{Proof:}  Every prime greater then to 2 is of the form \(4m + 1\) or \(4m + 3\)
+ In the first case,\\
+\(N = 2^{(n-1)}(2n-1) \equiv \frac{2^{(24m)}}{2^{(24m+1)}-1} \equiv (16^m)(2.{16^m}-1) \equiv 6^m(2.{6^m}-1) \equiv 6(12-1) \equiv 6 \pmod{10}\).
+
+Since by the induction it is clear that \(6^m \equiv 6 \pmod{10}\) for all m. \\
+Similarly in the 2nd case,
+
+\(N = 4.16^m \cdot (8.16^m-1) \equiv 4 \cdot 6 (8 \cdot 6-1) \equiv 4(8-1) \equiv 8 \pmod{10}\)
+ \\
+Finally, if n=2, N=6 and so, we capture all the possibilities. \\
+\subsection{Odd Perfect number:}
+
+ Till now we have been seen so many properties and facts about Perfect number given by a lot of mathematicians but they are all about even perfect number. Even the perfect number given by Mersenne primes are always even. Then what about the odd perfect number? It is still an open problem. So, we don't have such information about odd perfect number.\\
+
+\clearpage
+ 
+\section*{References:}
+
+\raggedright
+\setlength{\itemsep}{0.5em}  % Adjust the spacing between items
+
+\item 1. Syed Asadulla, Even perfect numbers and their Euler’s function, Internat. J. Math. Math. Sci. 10 (1987), 409--412.
+
+\item 2. Stanley J. Bezuszka and Margaret J. Kenney, Even perfect numbers: (update)2, Math. Teacher 90 (1997), 628--633.
+
+\item 3. R. D. Carmichael, Multiply perfect numbers of four different primes, Annals of Math. 8 (1906--1907), 149--158.
+
+\item 4. Graeme L. Cohen, Even perfect numbers, Math. Gaz. 65 (1981), 28--30.
+
+\item 5. L. E. Dickson, Notes on the theory of numbers, Amer. Math. Monthly 18 (1911), 109.
+
+\item 6. Leonard Eugene Dickson, History of the theory of numbers, vol. 1, pp. 3--33, Chelsea Pub. Co., New York, 1971.
+
+\item 7. I.N. Herstein, Abstract algebra, 3rd ed., Prentice-Hall, Upper Saddle River, N.J., 1996.
+
+\item 8. David G. Kendall, The scale of perfection, J. Appl. Prob. 19A (1982), 125--138.
+
+\item 9. J. Knopfmacher, A note on perfect numbers, Math. Gazette 44 (1960), 45.
+
+\item 10. Wayne L. McDaniel, On the proof that all even perfect numbers are of Euclid’s type, Math. Mag. 48 (1975), 107--108.
+
+\end{frame}
+\end{center}
+%==================================================
+
+
+\onecolumn
+
+\begin{center}
+\thispagestyle{empty}
+\textbf{\fontsize{20}{\baselineskip}\selectfont DECLARATION}
+
+\bigskip
+\bigskip
+
+\bigskip
+\bigskip
+
+
+\end{center}
+I sincerely declare that:
+\begin{enumerate}
+      \item I am the sole author of this project report,
+      \item All the information contained in this project report is certain and correct to the best of my knowledge,
+      \item I declare that the project report here submitted is original except for the source materials explicitly acknowledged and that this project or parts of this thesis have not been previously submitted for the same degree or for a different degree, and 
+      \item I also acknowledge that I am aware of the Rules on Handling Student Academic Dishonesty and the Regulations of the Student Discipline of the Murshidabadh University.
+\end{enumerate}
+
+\bigskip
+
+\bigskip
+
+Signature\ \ \ \ \ :
+
+\bigskip
+
+\bigskip
+
+Name\ \ \ \ \ \ \ \ \ \ \ : \hspace{} \hspace{}
+
+\bigskip
+
+\bigskip
+
+Roll No.\ : \hspace{} \hspace{}
+
+\bigskip
+
+\bigskip
+
+Date\ \ \ \ \ \ \ \ \ \ \ \ \ : \hspace{} \hspace{} {\today}
+\clearpage
+%-----------------------------------------------------------------
+
+\end{document}
