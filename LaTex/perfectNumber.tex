@@ -1,23 +1,26 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Please change article to book
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %===========================================
 
 %%%%%%%%%%%%%%% ALERT %%%%%%%%%%%%%%%%%%%%%%%
 
-% Please add photos named photo-1.jpeg and photo-2.jpeg in the same folder as this file.
+% Please add photos named photo-1.jpeg, photo-2.jpeg  and University Logo in the same folder as this file.
 
 % After adding photoes, please remove these comments.
 
 %===========================================
 
-\documentclass[12pt,,a4paper]{book}
+\documentclass[12pt,,a4paper]{article}
 \usepackage{unicode-math}
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{graphicx}
-
+\usepackage{xcolor}
+\usepackage[document]{ragged2e}
 \usepackage{siunitx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{txfonts}
+%\usepackage{txfonts}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-------------------------------------------
@@ -50,101 +53,135 @@
 
 %-------------------------------------
 % Title Start 
-\begin{titlepage}
-    
-
 \onecolumn
+
+\thispagestyle{empty}
 
 \begin{center}
 
+\textbf{\fontsize{28}{\baselineskip}\selectfont\color{blue} PERFECT NUMBER}
 
+\vspace*{1.2cm}
 
-
-\textbf{\fontsize{33}{\baselineskip}\selectfont MURSHIDABADH}
-
-\bigskip
-\bigskip
-
-
-\textbf{\fontsize{33}{\baselineskip}\selectfont UNIVERSITY}
-\bigskip
+\textbf{\fontsize{22}{\baselineskip}\selectfont M.Sc 4th Semester Project Work}
 
 \bigskip
-\bigskip
-\bigskip
 
-\textbf{\fontsize{20}{\baselineskip}\selectfont Deparment of Mathematics }
-
-
-\bigskip
-\bigskip
-
+\textbf{\fontsize{16}{\baselineskip}\selectfont Paper Code :- PG-MATH-PW-403}
 
 \bigskip
 
 
-
-\bigskip
-\bigskip
-
-\textbf{\fontsize{22}{\baselineskip}\selectfont PERFECT NUMBER}
-
-\bigskip
-
-\bigskip
-
-\bigskip
-
-\textit{\textbf{\fontsize{17}{\baselineskip}\selectfont by}}
-
-\bigskip
-
-\bigskip
-
-\bigskip
-
-\textbf{\fontsize{20}{\baselineskip}\selectfont Triparna Sarkar }
-
-\bigskip
-
-\bigskip
-
+\textit{\fontsize{18}{\baselineskip}\selectfont Submitted  by}
 
 
 \bigskip
 
-\textbf{\fontsize{17}{\baselineskip}\selectfont M.Sc 4th Semester Project }
-\bigskip
-\bigskip
-
-\textbf{\fontsize{16}{\baselineskip}\selectfont Project Supervisor }
-
-\bigskip
-
-\bigskip
-
-\textbf{\fontsize{17}{\baselineskip}\selectfont Dr. Rajib Mukherjee  }
-
-
+\textbf{\fontsize{24}{\baselineskip}\selectfont\color{magenta} Triparna Sarkar } 
 
 
 \bigskip
 
+\textbf{\large{Roll No-21-P09-037\vspace*{0.5cm}\\Reg. No-21-209-11-0718\vspace*{0.5cm}\\ Session - 2021-2023}}
+
+
 \bigskip
+\textit{\fontsize{17}{\baselineskip}\selectfont under the supervisor of \color{red}\textbf{Dr. Rajib Mukherjee } }
+\vspace*{0.5cm}
+\begin{center}
+    
+\includegraphics[width=5cm]{Murshidabad_University_Logo.png}
+\end{center}
+\vspace*{0.5cm}
+\textbf{\fontsize{14}{\baselineskip}\selectfont DEPARTMENT OF MATHEMATICS\vspace*{0.5cm}\\\color{blue} MURSHIDABAD UNIVERSITY\vspace*{0.5cm}\\\color{darkgray} (K.N. College Campus)\\\vspace*{0.5cm}\color{black}\small MURSHIDABAD - 742101, WB, INDIA\\ \vspace*{0.2cm}}
 
 {\today}
 \end{center}
 
 \clearpage
-\end{titlepage}
 
 %-------------------------------------------------------------------
 
+%--------------- Declaration Starts -------------------
+\begin{center}
+    
+\section*{\color{blue}\underline {DECLARATION}}
+\end{center}
+\thispagestyle{empty}
+%\thispagestyle{empty}
+\section*{}
+
+\paragraph{
+I, Triparna Sarkar, certify that, this project report on \textbf{Perfect Number}, is completely my work, based on my personal study and research.
+}
+\paragraph{
+This work contains has done by me under the supervision of Dr. Rajib Mukherjee.
+} 
+
+\paragraph{
+I have acknowledged all material and sources used in its preparation whether they be books, articles, reports, letters, notes and any other kind of document, elements or personal communication. I have given due credit to them in the text of the text of the report and giving details in the references. 
+} 
+
+
+
+\paragraph{
+    \today \hspace{7cm} Triparna Sarkar
+}
+\vspace{1.5cm}
+
+
+
+\newpage
+
+%--------------- Declaration Ends -------------------
+
+
+%--------------- Certificate Starts -------------------
+
+\begin{center}
+    
+\includegraphics[width=5cm]{Murshidabad_University_Logo.png}
+\end{center}
+
+\begin{center}
+    
+\section*{\color{blue}\underline {CERTIFICATE}}
+\end{center}
+\thispagestyle{empty}
+%\thispagestyle{empty}
+\section*{}
+
+\paragraph{
+This is to certify that the work contained in this project report entitled \textbf{Perfect Number}, submitted by Triparna Sarkar (Roll NO:21-P09-037) to Murshidabad University, Murshidabad towards the partial requirement for the completion of the 4th Semester of Masters of Science in Mathematics has been carried out by him under my supervision. 
+}
+\paragraph{
+The result of this project work or any part thereof has not been submitted elsewhere for the award of any degree or diploma.
+} 
+
+
+
+
+\paragraph{------------------------- \hspace{5cm}-----------------------
+}
+\vspace{1.5cm}
+
+HOD, \hspace{8cm} Project Supervisor \\ Department of Mathematics\hspace{4cm}(Dr. Rajib Mukherjee)  \\ (Dr. Rajib Mukherjee)\hspace{5cm} Date:   /\hspace{0.5cm}   /
+\vspace{1.5cm}
+
+
+
+\newpage
+
+%--------------- Certificate Ends -------------------
 
 
 %--------------------------------------
 % Actknowledgement Start
-\section*{Acknowledgement}
+\begin{center}
+    
+\section*{\color{blue}\underline {ACKNOWLEDGEMENT}}
+\end{center}
+\thispagestyle{empty}
 %\thispagestyle{empty}
 \section*{}
 I am very grateful to our \textbf{”Department of Mathematics,Murshidabad
@@ -155,11 +192,11 @@ corrected my mistakes which was a great help for improvement of my
 presentation.
 I also thankful to our respected teacher \textbf{Abhijit Sen} for teaching us Latex
 and help me to make this project.
-
+\newpage
 %-----------------------------------------------
 
 % Table of Content start
-
+%\thispagestyle{empty}
 \tableofcontents
 \clearpage
 % Table of content Ends
@@ -453,55 +490,6 @@ Finally, if n=2, N=6 and so, we capture all the possibilities. \\
 
 \end{frame}
 \end{center}
-%==================================================
 
-
-\onecolumn
-
-\begin{center}
-\thispagestyle{empty}
-\textbf{\fontsize{20}{\baselineskip}\selectfont DECLARATION}
-
-\bigskip
-\bigskip
-
-\bigskip
-\bigskip
-
-
-\end{center}
-I sincerely declare that:
-\begin{enumerate}
-      \item I am the sole author of this project report,
-      \item All the information contained in this project report is certain and correct to the best of my knowledge,
-      \item I declare that the project report here submitted is original except for the source materials explicitly acknowledged and that this project or parts of this thesis have not been previously submitted for the same degree or for a different degree, and 
-      \item I also acknowledge that I am aware of the Rules on Handling Student Academic Dishonesty and the Regulations of the Student Discipline of the Murshidabadh University.
-\end{enumerate}
-
-\bigskip
-
-\bigskip
-
-Signature\ \ \ \ \ :
-
-\bigskip
-
-\bigskip
-
-Name\ \ \ \ \ \ \ \ \ \ \ : \hspace{} \hspace{}
-
-\bigskip
-
-\bigskip
-
-Roll No.\ : \hspace{} \hspace{}
-
-\bigskip
-
-\bigskip
-
-Date\ \ \ \ \ \ \ \ \ \ \ \ \ : \hspace{} \hspace{} {\today}
-\clearpage
-%-----------------------------------------------------------------
 
 \end{document}
