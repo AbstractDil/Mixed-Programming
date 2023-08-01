@@ -4,11 +4,7 @@ for (var totalMarks = 0, s = 0; s < 4; s++) {
     var sectionLabels = document.querySelectorAll('.section-lbl');
     var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
 
-  for (
-    var right = 0, notAttempted = 0, bonus = 0, i = 25 * s;
-    i < 25 * s + 25;
-    i++
-  ) {
+  for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * s;i < 25 * s + 25;i++) {
     " -- " ===
       document
         .getElementsByClassName("question-pnl")
