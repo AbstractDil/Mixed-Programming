@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Extract Name and Email
+  </title>
+</head>
+<body>
+
+  <form>
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" placeholder="Enter URL">
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="resultContainer"></div>
+
+  <script>
+
+    const form = document.querySelector('form');
+    const resultContainer = document.getElementById('resultContainer');
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+
+      const url = document.getElementById('url').value;
+
+      fetch(url)
+        .then(response => response.text())
+        .then(htmlContent => {
+          // Create a temporary element to parse the HTML content
+          const tempElement = document.createElement('div');
+          tempElement.innerHTML = htmlContent;
+
+          // Extract the name and email
+          const nameElement = tempElement.querySelector('span.name');
+          const emailElement = tempElement.querySelector('span.email');
+          
+          const name = nameElement ? nameElement.textContent.trim() : 'Name not found';
+          const email = emailElement ? emailElement.textContent.trim() : 'Email not found';
+
+          // Display the extracted data
+          resultContainer.innerHTML = `
+            <p>Name: ${name}</p>
+            <p>Email: ${email}</p>
+          `;
+        })
+        .catch(error => {
+          console.log('Error fetching data:', error);
+          resultContainer.innerHTML = `<p>Error: ${error.message}</p>`;
+        });
+    });
+
+
+  </script>
+  
+</body>
+</html>
