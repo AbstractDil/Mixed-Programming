@@ -146,3 +146,31 @@ $('.watermark').css('align-content', 'center');
 
 //$('.watermark').css('content', 'S.Bagchi Combined');
 
+/*
+----------------------------------------------------------
+Set print title 
+----------------------------------------------------------
+*/
+
+
+// get value of exam name and date
+
+var examDate = $('.main-info-pnl table tbody tr:nth-child(4) td:nth-child(2)').text();
+var examShift = $('.main-info-pnl table tbody tr:nth-child(5) td:nth-child(2)').text();
+var examName = $('.main-info-pnl table tbody tr:nth-child(6) td:nth-child(2)').text();
+
+
+console.log('Exam Date: ' + examDate);
+console.log('Exam Name: ' + examName);
+console.log('Exam Shift: ' + examShift);
+
+
+// remove space and add underscore to exam name
+
+examName = examName.replace(/\s+/g, '_');
+
+
+// To set print title
+
+document.title =  examName + '_' + examDate + '_' + examShift;
+
