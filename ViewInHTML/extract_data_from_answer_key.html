@@ -13,15 +13,8 @@
 
       <script>
         
-    
-
-
-
-
-   
-
-
-            // fetch data using above code and display it in resultContainer
+            // fetch data using above code and display it in resultContainer  
+            const url = "https://ssc.digialm.com///per/g27/pub/2207/touchstone/AssessmentQPHTMLMode1/2207O23185/2207O23185S16D96689/16903725363856045/4419003305_2207O23185S16D96689E1.html";
 
             fetch(url)
             .then(response => response.text())
@@ -30,48 +23,50 @@
                 const tempElement = document.createElement('div');
                 tempElement.innerHTML = htmlContent;
 
-                for (var totalMarks = 0, s = 0; s < 4; s++) {
+               
+for (var totalMarks = 0, s = 0; s < 4; s++) {
 
-                var sectionLabels = tempElement.querySelectorAll('.section-lbl');
-                var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
+var sectionLabels = document.querySelectorAll('.section-lbl');
+var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
 
-                for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * s;i < 25 * s + 25;i++) {
-                " -- " ===
-                tempElement
-                    .getElementsByClassName("question-pnl")
-                    [i].getElementsByClassName("bold")[5].textContent && notAttempted++;
-                // var sectionTexts = sectionLabels[i].querySelector('span.bold').textContent;
-                try {
-                tempElement
-                    .getElementsByClassName("question-pnl")
-                    [i].getElementsByClassName("rightAns")[0].textContent[0] ===
-                    tempElement
-                    .getElementsByClassName("question-pnl")
-                    [i].getElementsByClassName("bold")[5].textContent && right++;
-                } catch {
-                bonus++;
-                }
-                }
-                (wrong = 25 - notAttempted - right - bonus),
-                (marks = 2 * (right + bonus) - 0.5 * wrong),
-                (totalMarks += marks);
+for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * s;i < 25 * s + 25;i++) {
+" -- " ===
+  document
+    .getElementsByClassName("question-pnl")
+    [i].getElementsByClassName("bold")[5].textContent && notAttempted++;
+   // var sectionTexts = sectionLabels[i].querySelector('span.bold').textContent;
+try {
+  document
+    .getElementsByClassName("question-pnl")
+    [i].getElementsByClassName("rightAns")[0].textContent[0] ===
+    document
+      .getElementsByClassName("question-pnl")
+      [i].getElementsByClassName("bold")[5].textContent && right++;
+} catch {
+  bonus++;
+}
+}
+(wrong = 25 - notAttempted - right - bonus),
+(marks = 2 * (right + bonus) - 0.5 * wrong),
+(totalMarks += marks);
 
-                console.log(
-                "Section Name : " +
-                sectionTexts +
-                "\nAttempted : " +
-                (25 - notAttempted) +
-                "\nRight Answers : " +
-                right +
-                "\nWrong Answers : " +
-                wrong +
-                "\nBonus : " +
-                bonus +
-                "\nMarks : " +
-                marks
-                );
-                }
-                console.log("\nTotal Marks : " + totalMarks);
+console.log(
+"Section Name : " +
+sectionTexts +
+  "\nAttempted : " +
+  (25 - notAttempted) +
+  "\nRight Answers : " +
+  right +
+  "\nWrong Answers : " +
+  wrong +
+  "\nBonus : " +
+  bonus +
+  "\nMarks : " +
+  marks
+);
+}
+console.log("\nTotal Marks : " + totalMarks);
+
 
             })
             .catch(error => {
