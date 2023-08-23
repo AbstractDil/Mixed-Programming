@@ -1,5 +1,23 @@
 
+var examName = $('.main-info-pnl table tbody tr:nth-child(6) td:nth-child(2)').text();
+var examDate = $('.main-info-pnl table tbody tr:nth-child(4) td:nth-child(2)').text();
+var examShift = $('.main-info-pnl table tbody tr:nth-child(5) td:nth-child(2)').text();
+var examCenter = $('.main-info-pnl table tbody tr:nth-child(3) td:nth-child(2)').text();
+var examRollNo = $('.main-info-pnl table tbody tr:nth-child(1) td:nth-child(2)').text();
+var candidateName = $('.main-info-pnl table tbody tr:nth-child(2) td:nth-child(2)').text();
+
+console.log("%c Exam Name: " + examName
++ "\n Exam Date: " + examDate
++ "\n Exam Shift: " + examShift
++ "\n Exam Center: " + examCenter
++ "\n Exam Roll No: " + examRollNo
++ "\n Candidate Name: " + candidateName,
+"background: #222; color: #bada55;");
+
+
+
 for (var totalMarks = 0, s = 0; s < 4; s++) {
+
 
     var sectionLabels = document.querySelectorAll('.section-lbl');
     var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
@@ -26,6 +44,7 @@ for (var totalMarks = 0, s = 0; s < 4; s++) {
     (totalMarks += marks);
 
   console.log(
+    "%c" +
     "Section Name : " +
     sectionTexts +
       "\nAttempted : " +
@@ -37,7 +56,15 @@ for (var totalMarks = 0, s = 0; s < 4; s++) {
       "\nBonus : " +
       bonus +
       "\nMarks : " +
-      marks
+      marks,  "background: #222; color:#D3D3D3;font-size:12px;"
   );
+
+ 
+
+
+
+
 }
-console.log("\nTotal Marks : " + totalMarks);
+console.log(" %c \nTotal Marks : " + totalMarks, "background: #222; color: skyblue;");
+
+console.log("%c Powered by : MathHub Combined (https://mathhub.nandysagar.in) ", "background: #222; color: #ca5565;font-size:14px;")
