@@ -65,13 +65,14 @@ console.log(" %c \nTotal Marks in Session-1 : " + totalMarks, "background: #222;
 console.log("%c Powered by : MathHub Combined (https://mathhub.nandysagar.in) ", "background: #222; color: #ca5565;font-size:14px;")
 
 
-// Calculate Session-2 General Awarness Score 
+// Calculate Session-2  Score 
 // Each Question Carries 3 marks and there is 1 negative marking for every wrong question
 
 
-for (var totalMarks = 0, s = 2; s < 3; s++) {
+for (var totalMarks = 0, s = 0; s < 1; s++) {
     var sectionLabels = document.querySelectorAll('.section-lbl');
     var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
+    console.log("Section Name : " + sectionTexts);
 
   for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * s;i < 25 * s + 25;i++) {
     " -- " ===
@@ -109,45 +110,3 @@ for (var totalMarks = 0, s = 2; s < 3; s++) {
   );
 }
 
-// Calculate Session-2 English Score 
-// Each Question Carries 3 marks and there is 1 negative marking for every wrong question
-
-for (var totalMarks = 0, s = 3; s < 4; s++) {
-    var sectionLabels = document.querySelectorAll('.section-lbl');
-    var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
-    console.log("Section Name : " + sectionTexts);
-
-  for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * s;i < 25 * s + 25;i++) {
-    " -- " ===
-      document.getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[11].textContent && notAttempted++;
-    try {
-      document
-        .getElementsByClassName("question-pnl")
-        [i].getElementsByClassName("rightAns")[0].textContent[0] ===
-        document
-          .getElementsByClassName("question-pnl")
-          [i].getElementsByClassName("bold")[11].textContent && right++;
-    } catch {
-      bonus++;
-    }
-  }
-  (wrong = 25 - notAttempted - right - bonus),
-    (marks = 3 * (right + bonus) - 1 * wrong),
-    (totalMarks += marks);
-
-  console.log(
-    "%c" +
-    "Section Name : " +
-    sectionTexts +
-      "\nAttempted : " +
-      (25 - notAttempted) +
-      "\nRight Answers : " +
-      right +
-      "\nWrong Answers : " +
-      wrong +
-      "\nBonus : " +
-      bonus +
-      "\nMarks : " +
-      marks,  "background: #222; color:#D3D3D3;font-size:12px;"
-  );
-}
