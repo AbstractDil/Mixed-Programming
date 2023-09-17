@@ -69,7 +69,7 @@ console.log("%c Powered by : MathHub Combined (https://mathhub.nandysagar.in) ",
 // Each Question Carries 3 marks and there is 1 negative marking for every wrong question
 
 
-for (var totalMarks = 0, s = 0; s < 1; s++) {
+for (var totalMarks = 0, s = 2; s < 4; s++) {
     var sectionLabels = document.querySelectorAll('.section-lbl');
     var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
     console.log("Section Name : " + sectionTexts);
