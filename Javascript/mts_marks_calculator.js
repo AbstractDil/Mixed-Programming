@@ -27,7 +27,7 @@ for (var totalMarks = 0, s = 0; s < 2; s++) {
     " -- " ===
       document
         .getElementsByClassName("question-pnl")
-        [i].getElementsByClassName("bold")[10].textContent && notAttempted++;
+        [i].getElementsByClassName("bold")[9].textContent && notAttempted++;
        // var sectionTexts = sectionLabels[i].querySelector('span.bold').textContent;
     try {
       document
@@ -35,7 +35,7 @@ for (var totalMarks = 0, s = 0; s < 2; s++) {
         [i].getElementsByClassName("rightAns")[0].textContent[0] ===
         document
           .getElementsByClassName("question-pnl")
-          [i].getElementsByClassName("bold")[10].textContent && right++;
+          [i].getElementsByClassName("bold")[9].textContent && right++;
     } catch {
       bonus++;
     }
@@ -62,51 +62,110 @@ for (var totalMarks = 0, s = 0; s < 2; s++) {
 }
 console.log(" %c \nTotal Marks in Session-1 : " + totalMarks, "background: #222; color: skyblue;");
 
-console.log("%c Powered by : MathHub Combined (https://mathhub.nandysagar.in) ", "background: #222; color: #ca5565;font-size:14px;")
+//console.log("%c Powered by : MathHub Combined (https://mathhub.nandysagar.in) ", "background: #222; color: #ca5565;font-size:14px;")
 
 
 // Calculate Session-2  Score 
 // Each Question Carries 3 marks and there is 1 negative marking for every wrong question
 
 
-for (var totalMarks = 0, s = 2; s < 4; s++) {
-    var sectionLabels = document.querySelectorAll('.section-lbl');
-    var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
-    console.log("Section Name : " + sectionTexts);
+    // Score For GS Section
 
-  for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * s;i < 25 * s + 25;i++) {
-    " -- " ===
-      document.getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[10].textContent && notAttempted++;
-      
-    try {
-      document
-        .getElementsByClassName("question-pnl")
-        [i].getElementsByClassName("rightAns")[0].textContent[0] ===
-        document
-          .getElementsByClassName("question-pnl")
-          [i].getElementsByClassName("bold")[10].textContent && right++;
-    } catch {
-      bonus++;
+    for (var totalMarks_GS = 0, s = 2; s < 3; s++) {
+      var sectionLabels = document.querySelectorAll('.section-lbl');
+      var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
+     //console.log("Section Name : " + sectionTexts);
+  
+    for(var q=0;q<1;q++){
+  
+      for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * q;i < 25 * q + 25;i++) {
+        //console.log(i);
+        " -- " ===
+        document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[9].textContent && notAttempted++;
+          
+        try {
+          document.getElementsByClassName("grp-cntnr")[1]
+            .getElementsByClassName("question-pnl")
+            [i].getElementsByClassName("rightAns")[0].textContent[0] ===
+            document.getElementsByClassName("grp-cntnr")[1]
+              .getElementsByClassName("question-pnl")
+              [i].getElementsByClassName("bold")[9].textContent && right++;
+        } catch {
+          bonus++;
+        }
+      }
     }
+  
+    (wrong = 25 - notAttempted - right - bonus),
+      (marks_GS = 3 * (right + bonus) - 1 * wrong),
+      (totalMarks_GS += marks_GS);
+  
+    console.log(
+      "%c" +
+      "Section Name : " +
+      sectionTexts +
+        "\nAttempted : " +
+        (25 - notAttempted) +
+        "\nRight Answers : " +
+        right +
+        "\nWrong Answers : " +
+        wrong +
+        "\nBonus : " +
+        bonus +
+        "\nMarks : " +
+        marks_GS,  "background: #222; color:#D3D3D3;font-size:12px;"
+    );
   }
-  (wrong = 25 - notAttempted - right - bonus),
-    (marks = 3 * (right + bonus) - 1 * wrong),
-    (totalMarks += marks);
-
-  console.log(
-    "%c" +
-    "Section Name : " +
-    sectionTexts +
-      "\nAttempted : " +
-      (25 - notAttempted) +
-      "\nRight Answers : " +
-      right +
-      "\nWrong Answers : " +
-      wrong +
-      "\nBonus : " +
-      bonus +
-      "\nMarks : " +
-      marks,  "background: #222; color:#D3D3D3;font-size:12px;"
-  );
-}
-
+  
+  
+        // Score For English Section 
+          for (var totalMarks_Eng = 0, s = 3; s < 4; s++) {
+      var sectionLabels = document.querySelectorAll('.section-lbl');
+      var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
+      //console.log("Section Name : " + sectionTexts);
+  
+    for(var q=1;q<2;q++){
+  
+      for ( var right = 0,notAttempted = 0, bonus = 0, i = 25 * q;i < 25 * q + 25;i++) {
+        //console.log(i);
+        " -- " ===
+        document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[9].textContent && notAttempted++;
+          
+        try {
+          document.getElementsByClassName("grp-cntnr")[1]
+            .getElementsByClassName("question-pnl")
+            [i].getElementsByClassName("rightAns")[0].textContent[0] ===
+            document.getElementsByClassName("grp-cntnr")[1]
+              .getElementsByClassName("question-pnl")
+              [i].getElementsByClassName("bold")[9].textContent && right++;
+        } catch {
+          bonus++;
+        }
+      }
+    }
+  
+    (wrong = 25 - notAttempted - right - bonus),
+      (marks_Eng = 3 * (right + bonus) - 1 * wrong),
+      (totalMarks_Eng += marks_Eng);
+  
+    console.log(
+      "%c" +
+      "Section Name : " +
+      sectionTexts +
+        "\nAttempted : " +
+        (25 - notAttempted) +
+        "\nRight Answers : " +
+        right +
+        "\nWrong Answers : " +
+        wrong +
+        "\nBonus : " +
+        bonus +
+        "\nMarks : " +
+        marks_Eng,  "background: #222; color:#D3D3D3;font-size:12px;"
+    );
+  }
+  
+  const totalMarksII = totalMarks_GS + totalMarks_Eng;
+  
+  console.log(" %c \nTotal Marks in Session-II : " + totalMarksII, "background: #222; color: skyblue;");
+  console.log("%c SSC MTS 2023 Score Card Generating System \n Powered by : MathHub Combined (https://mathhub.nandysagar.in) \n Developed by : Sagar Nandy (https://www.nandysagar.in/) ", "background: #222; color: #ca5565;")
