@@ -1,3 +1,12 @@
+/*
+----------------------------------------------------------------------------
+Using JQuery and Javascript to generate answer key for SSC MTS 2023 exam
+-----------------------------------------------------------------------------
+@Author: Sagar Nandy
+
+@Date: 2023-09-19
+
+*/
 
 var examName = $('.main-info-pnl table tbody tr:nth-child(6) td:nth-child(2)').text();
 var examDate = $('.main-info-pnl table tbody tr:nth-child(4) td:nth-child(2)').text();
@@ -60,7 +69,7 @@ for (var totalMarks = 0, s = 0; s < 2; s++) {
       marks,  "background: #222; color:#D3D3D3;font-size:12px;"
   );
 }
-console.log(" %c \nTotal Marks in Session-1 : " + totalMarks, "background: #222; color: skyblue;");
+console.log("%c Total Marks in Session-I : " + totalMarks, "color: skyblue;");
 
 
 
@@ -110,7 +119,7 @@ console.log(
 );
 }
 
-console.log(" %c \nTotal Marks in Session-II : " + totalMarks_II, "background: #222; color: skyblue;");
+console.log("%c Total Marks in Session-II : " + totalMarks_II, "color: skyblue;");
 
 
 console.log("%c SSC MTS 2023 Score Card Generating System \n Powered by : MathHub Combined (https://mathhub.nandysagar.in) \n Developed by : Sagar Nandy (https://www.nandysagar.in/) ", "background: #222; color: #ca5565;")
