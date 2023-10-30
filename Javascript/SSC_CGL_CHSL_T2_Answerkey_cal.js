@@ -199,4 +199,6 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
   console.log("%c Total Marks in Computer : " + totalMarks_Comp, "color: skyblue;");
 
 
+
+
 console.log("%c MathHub Score Card Generating System \n Powered by : MathHub Combined (https://mathhub.nandysagar.in) \n Developed by : Sagar Nandy (https://www.nandysagar.in/) ", "background: #222; color: #ca5565;")
