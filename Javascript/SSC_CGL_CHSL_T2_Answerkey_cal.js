@@ -26,7 +26,7 @@ for (var totalMarks = 0, s = 0; s < 2; s++) {
     " -- " ===
       document
         .getElementsByClassName("question-pnl")
-        [i].getElementsByClassName("bold")[5].textContent && notAttempted++;
+        [i].getElementsByClassName("bold")[9].textContent && notAttempted++;
        // var sectionTexts = sectionLabels[i].querySelector('span.bold').textContent;
     try {
       document
@@ -34,7 +34,7 @@ for (var totalMarks = 0, s = 0; s < 2; s++) {
         [i].getElementsByClassName("rightAns")[0].textContent[0] ===
         document
           .getElementsByClassName("question-pnl")
-          [i].getElementsByClassName("bold")[5].textContent && right++;
+          [i].getElementsByClassName("bold")[9].textContent && right++;
     } catch {
       bonus++;
     }
@@ -70,7 +70,7 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
     for ( var right = 0,notAttempted = 0, bonus = 0, i = 45 * (s-2);i < 45 * (s-2) + 45;i++) {
       //console.log(i);
       " -- " ===
-      document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[5].textContent && notAttempted++;
+      document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[9].textContent && notAttempted++;
         
       try {
         document.getElementsByClassName("grp-cntnr")[1]
@@ -78,7 +78,7 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
           [i].getElementsByClassName("rightAns")[0].textContent[0] ===
           document.getElementsByClassName("grp-cntnr")[1]
             .getElementsByClassName("question-pnl")
-            [i].getElementsByClassName("bold")[5].textContent && right++;
+            [i].getElementsByClassName("bold")[9].textContent && right++;
       } catch {
         bonus++;
       }
@@ -115,7 +115,7 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
     for (  var right = 0,notAttempted = 0, bonus = 0, i = 25 * (s-3);i < 25 * (s-3) + 25;i++) {
       //console.log(i);
       " -- " ===
-      document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("section-cntnr")[1].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[5].textContent && notAttempted++;
+      document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("section-cntnr")[1].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[9].textContent && notAttempted++;
         
       try {
         document.getElementsByClassName("grp-cntnr")[1]
@@ -123,7 +123,7 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
           [i].getElementsByClassName("rightAns")[0].textContent[0] ===
           document.getElementsByClassName("grp-cntnr")[1].getElementsByClassName("section-cntnr")[1]
             .getElementsByClassName("question-pnl")
-            [i].getElementsByClassName("bold")[5].textContent && right++;
+            [i].getElementsByClassName("bold")[9].textContent && right++;
       } catch {
         bonus++;
       }
@@ -149,7 +149,8 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
   );
   }
 
-  let marksInSessionII = (totalMarks_II) + (totalMarks_III);
+  let marksInSessionII =  (totalMarks_II) + (totalMarks_III);
+
 
   console.log("%c Total Marks in Eng & GS : " + marksInSessionII, "color: skyblue;");
 
@@ -162,7 +163,7 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
     for ( var right = 0,notAttempted = 0, bonus = 0, i = 20 * (s-4);i < 20 * (s-4) + 20;i++) {
       //console.log(i);
       " -- " ===
-      document.getElementsByClassName("grp-cntnr")[2].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[5].textContent && notAttempted++;
+      document.getElementsByClassName("grp-cntnr")[2].getElementsByClassName("question-pnl")[i].getElementsByClassName("bold")[9].textContent && notAttempted++;
         
       try {
         document.getElementsByClassName("grp-cntnr")[2]
@@ -170,7 +171,7 @@ for (var totalMarks_II = 0, s = 2; s < 3; s++) {
           [i].getElementsByClassName("rightAns")[0].textContent[0] ===
           document.getElementsByClassName("grp-cntnr")[2]
             .getElementsByClassName("question-pnl")
-            [i].getElementsByClassName("bold")[5].textContent && right++;
+            [i].getElementsByClassName("bold")[9].textContent && right++;
       } catch {
         bonus++;
       }
