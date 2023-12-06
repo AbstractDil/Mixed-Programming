@@ -176,7 +176,7 @@ console.log("%c SSC MTS 2023 Score Card Generating System \n Powered by : MathHu
   
   
         // Score For English Section 
-          for (var totalMarks_Eng = 0, s = 3; s < 4; s++) {
+      for (var totalMarks_Eng = 0, s = 3; s < 4; s++) {
       var sectionLabels = document.querySelectorAll('.section-lbl');
       var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
       //console.log("Section Name : " + sectionTexts);
