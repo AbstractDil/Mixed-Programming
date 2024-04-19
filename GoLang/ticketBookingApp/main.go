@@ -7,6 +7,7 @@ func main(){
 	appName := "iTicket"; // := this symbol is used for declare variable withour type
 	const totalTickets int = 50; // total no of tickes available
 	var remainingTickets uint = 50; // uint for positive
+	var bookings  []string
 
 
 	fmt.Println("Welcome to", appName ," - A Online Ticket Booking Application");
@@ -31,9 +32,18 @@ func main(){
 
 	remainingTickets = remainingTickets - userTickets;
 
+	bookings = append(bookings, firstName + " " + lastName)
+
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will received a confirmation message in your mobile number %v. \n",firstName,lastName,userTickets,userMobNo );
 
 	fmt.Printf("%v tickets are left \n", remainingTickets);
+
+	fmt.Printf("The whole slice : %v \n", bookings);
+	fmt.Printf("The firstname : %v \n", bookings[0]);
+	fmt.Printf("Slice  type : %T \n", bookings);
+	fmt.Printf("Slice length : %v \n", len(bookings));
+
+
 
 	
 
