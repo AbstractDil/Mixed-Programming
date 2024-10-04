@@ -64,4 +64,4 @@ for (var totalMarks = 0, s = 0; s < 4; s++) {
 }
 console.log(" %c \nTotal Marks : " + totalMarks, "background: #222; color: skyblue;");
 
-console.log("%c SSC MTS 2023 Score Card Generating System \n Powered by : MathHub Combined (https://mathhub.nandysagar.in) \n Developed by : Sagar Nandy (https://www.nandysagar.in/) ", "background: #222; color: #ca5565;")
+console.log("%c SSC CGL 2024 Score Card Generating System \n Powered by : MathHub Combined (https://mathhub.nandysagar.in) \n Developed by : Sagar Nandy (https://www.nandysagar.in/) ", "background: #222; color: #ca5565;")
