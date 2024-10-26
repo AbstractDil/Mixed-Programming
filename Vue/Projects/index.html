@@ -23,14 +23,56 @@
             {{ description }}
         </p>
 
+        <!-- Example of v-bind directives -->
+
         <a v-bind:href="url">Go to nandysagar.in</a>
 
         <div class="container my-3">
             <div class="row">
 
-                <img v-bind:src="imgUrl" v-bind:alt="imgTitle">
+                <div class="col-md-4">
+                    <div class="card">
+                       <div class="card-header">
+                           <img v-bind:src="imgUrl" v-bind:alt="imgTitle" class="img-fluid">
+                       </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <!-- Example of v-if,v-else and v-else-if directive -->
+
+        <!-- v-if and v-else -->
+        <p v-if="isStock" class="text-success">
+            Item in stock
+        </p>
+        <p v-else class="text-danger">
+            Item not in stock
+        </p>
+        <!-- v-if, v-else-if and v-else -->
+        <p v-if="items>3" class="text-success">
+            Item in stock
+        </p>
+        <p v-else-if="items<3" class="text-warning">
+           Few items left
+        </p>
+        <p v-else class="text-danger">
+            Item not in stock
+        </p>
+
+        <!-- v-show directive -->
+        <div v-show="showDiv">This div tag can be hidden</div>
+
+        <!-- v-for diective -->
+         <h3>Fruits</h3>
+         <ol>
+            <li v-for="(fruitname,i) in fruits" v-bind:key="i">Index:{{i}} Fruit-{{fruitname}}</li>
+         </ol>
+         <h3>Foods</h3>
+         <ol> 
+             <li v-for="(foods,i) in manyFoods" v-bind:key="i">{{foods.name}} {{foods.id}}</li>
+         </ol>
 
 
     </div>
