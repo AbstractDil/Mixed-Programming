@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "description": "How would you describe your relationship with this person?",
+        "type": "radio",
+        "options": [
+            { "value": "Acquaintance", "label": "Acquaintance" },
+            { "value": "Best Friend", "label": "Best Friend" },
+            { "value": "Colleague", "label": "Colleague" }
+        ]
+    },
+    {
+        "id": 2,
+        "description": "Why do you consider this person your best friend?",
+        "type": "text"
+    }
+]
