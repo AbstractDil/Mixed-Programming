@@ -7,7 +7,7 @@
     },
     {
         "id": 2,
-        "description": "How would you describe your relationship with this person?",
+        "description": "How would you describe your relationship with me?",
         "type": "radio",
         "options": [
             { "value": "Friend", "label": "Friend" },
@@ -23,17 +23,17 @@
     },
     {
         "id": 3,
-        "description": "Why do you consider this person your best friend?",
+        "description": "What one thing most people don't know about me?",
         "type": "text"
     },
     {
         "id": 4,
-        "description": "According to you, behaviour of this person is",
+        "description": "How would you describe my behavior?",
         "type": "text"
     },
     {
         "id": 5,
-        "description": "Do you trust this person?",
+        "description": "Do you trust me?",
         "type": "radio",
         "options": [
             { "value": "Yes", "label": "Yes" },
@@ -42,22 +42,22 @@
     },
     {
         "id": 6,
-        "description": "Where did you first meet?",
+        "description": "Where did we first meet?",
         "type": "text"
     },
     {
         "id": 7,
-        "description": "What is his/her favourite hobby?",
+        "description": "What is my favourite hobby?",
         "type": "text"
     },
     {
         "id": 8,
-        "description": "What is his/her favourite song?",
+        "description": "What is my favourite song?",
         "type": "text"
     },
     {
         "id": 9,
-        "description": "Do you like this person?",
+        "description": "Do you like me?",
         "type": "radio",
         "options": [
             { "value": "Yes", "label": "Yes" },
@@ -67,7 +67,7 @@
 
     {
         "id": 10,
-        "description": "Any suggestion or, Dedicate him/her a song?",
+        "description": "Any suggestion for me or, Dedicate me a song?",
         "type": "textarea"
     }
 
