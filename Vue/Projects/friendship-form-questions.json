@@ -1,17 +1,74 @@
 [
+
     {
         "id": 1,
-        "description": "How would you describe your relationship with this person?",
-        "type": "radio",
-        "options": [
-            { "value": "Acquaintance", "label": "Acquaintance" },
-            { "value": "Best Friend", "label": "Best Friend" },
-            { "value": "Colleague", "label": "Colleague" }
-        ]
+        "description": "What is your name?",
+        "type": "text"
     },
     {
         "id": 2,
+        "description": "How would you describe your relationship with this person?",
+        "type": "radio",
+        "options": [
+            { "value": "Friend", "label": "Friend" },
+            { "value": "Classmate", "label": "Classmate" },
+            { "value": "Best Friend", "label": "Best Friend" },
+            { "value": "Close Friend", "label": "Close Friend" },
+            { "value": "Enemy", "label": "Enemy" },
+            { "value": "Lover", "label": "Lover"}
+
+            
+
+        ]
+    },
+    {
+        "id": 3,
         "description": "Why do you consider this person your best friend?",
         "type": "text"
+    },
+    {
+        "id": 4,
+        "description": "According to you, behaviour of this person is",
+        "type": "text"
+    },
+    {
+        "id": 5,
+        "description": "Do you trust this person?",
+        "type": "radio",
+        "options": [
+            { "value": "Yes", "label": "Yes" },
+            { "value": "No", "label": "No" }
+        ]
+    },
+    {
+        "id": 6,
+        "description": "Where did you first meet?",
+        "type": "text"
+    },
+    {
+        "id": 7,
+        "description": "What is his/her favourite hobby?",
+        "type": "text"
+    },
+    {
+        "id": 8,
+        "description": "What is his/her favourite song?",
+        "type": "text"
+    },
+    {
+        "id": 9,
+        "description": "Do you like this person?",
+        "type": "radio",
+        "options": [
+            { "value": "Yes", "label": "Yes" },
+            { "value": "No", "label": "No" }
+        ]
+    },
+
+    {
+        "id": 10,
+        "description": "Any suggestion or, Dedicate him/her a song?",
+        "type": "textarea"
     }
+
 ]
