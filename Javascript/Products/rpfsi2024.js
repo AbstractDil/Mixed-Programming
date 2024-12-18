@@ -25,7 +25,7 @@ console.log(
     var sectionTexts = sectionLabels[s].querySelector('span.bold').textContent;
 
     // Determine the start and end indices for questions in each section
-    var startIndex, endIndex;
+    var startIndex, endIndex, totalSectionQuestions;
     if (s < 2) { // First two sections
         startIndex = 35 * s;
         endIndex = startIndex + 35;
@@ -33,6 +33,8 @@ console.log(
         startIndex = 70; // Question index starts from 71
         endIndex = 120; // Question index ends at 120
     }
+
+    totalSectionQuestions = endIndex - startIndex;
 
     var right = 0, notAttempted = 0, bonus = 0;
 
@@ -59,7 +61,7 @@ console.log(
         }
     }
 
-    var wrong = (endIndex - startIndex) - notAttempted - right - bonus;
+    var wrong = totalSectionQuestions - notAttempted - right - bonus;
     var marks = 1 * (right + bonus) - 0.33 * wrong;
     totalMarks += marks;
 
@@ -67,8 +69,10 @@ console.log(
         "%c" +
         "Section Name : " +
         sectionTexts +
+        "\nTotal Questions : " +
+        totalSectionQuestions +
         "\nAttempted : " +
-        ((endIndex - startIndex) - notAttempted) +
+        (totalSectionQuestions - notAttempted) +
         "\nRight Answers : " +
         right +
         "\nWrong Answers : " +
@@ -82,8 +86,9 @@ console.log(
 }
 
 console.log(
-    "%c \nTotal Questions: " + totalQuestions +
+    "%c Overall Total Questions: " + totalQuestions +
     "\nTotal Marks: " + totalMarks,
     "background: #222; color: skyblue;"
 );
+
 console.log("%c RPF SI 2024 Score Card Generating System \n Powered by : MathHub Combined (https://mathhub.nandysagar.in) \n Developed by : Sagar Nandy (https://www.nandysagar.in/) ", "background: #222; color: #ca5565;")
