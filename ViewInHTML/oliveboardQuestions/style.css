@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hqt{
+    display:none !important;
+}
+
+.question-outer-div, .panel {
+    page-break-inside: avoid; /* Prevent breaking within a question */
+    break-inside: avoid; /* Modern equivalent */
+}
