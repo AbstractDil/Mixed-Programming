@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-weight: bold; */
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Arial Black", sans-serif;
+    color: #2c3e50; /* Dark Blue Shade */
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #ff9800; /* Orange Underline */
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+.badge{
+    display:none;
+}
+
+.list-group-item{
+    page-break-inside: avoid; /* Prevent breaking within a question */
+    break-inside: avoid; /* Modern equivalent */
+}
+
+.qns-view-box p,  
+.qns-view-box span {  
+    font-weight: normal !important;  
+}
+
+
+.qns-view-box p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
