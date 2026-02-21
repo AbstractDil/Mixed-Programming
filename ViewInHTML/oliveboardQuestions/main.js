@@ -1,3 +1,66 @@
+document.addEventListener("DOMContentLoaded", function() {
+        // 1. Image Path Fixer
+        const prefix = "https://u1.oliveboard.in/exams/tests/";
+        document.querySelectorAll('img').forEach(img => {
+            let src = img.getAttribute('src');
+            if (src && !src.startsWith('http')) {
+                img.src = prefix + src;
+            }
+        });
+
+        // 2. Identify Elements
+        const rawTitle = document.querySelector('h3.text-center');
+        const questionPane = document.getElementById('question-inner-pane');
+        const questions = document.querySelectorAll('.question-outer-div');
+
+        // 3. Create the New Structure
+        const page = document.createElement('div');
+        page.className = 'page';
+
+        // Build Header
+        const header = document.createElement('div');
+        header.className = 'exam-header';
+        header.innerHTML = `
+            <div class="header-info">
+                <h2>${rawTitle ? rawTitle.innerText : 'EXAMINATION PAPER'}</h2>
+                
+            </div>
+        `;
+
+        // Build Main Content
+        const mainContent = document.createElement('div');
+        mainContent.className = 'main-content';
+
+        // Move all questions into the new mainContent
+        questions.forEach(q => mainContent.appendChild(q));
+
+        // Build Footer
+        const footer = document.createElement('div');
+        footer.className = 'footer';
+        footer.innerHTML = `Compiled on ${new Date().toLocaleDateString()} by Sagar Nandy | OliveBoard RRB NTPC Graduate Level Live Mock Series`;
+
+        // Assemble everything
+        page.appendChild(header);
+        page.appendChild(mainContent);
+        page.appendChild(footer);
+
+        // Replace the old layout with the new one
+        if (questionPane) {
+            questionPane.innerHTML = ''; // Clear old content
+            questionPane.appendChild(page);
+        }
+
+        // Hide the old standalone title if it exists
+        if (rawTitle) rawTitle.style.display = 'none';
+
+        // Add Print Button
+        const btn = document.createElement('button');
+        btn.innerText = "Print to PDF";
+        btn.className = "print-btn";
+        btn.onclick = () => window.print();
+        document.body.appendChild(btn);
+    });
+
 document.addEventListener("DOMContentLoaded", function () {
     // Hide all elements with the class 'hqt'
     document.querySelectorAll(".hqt").forEach(function (el) {
@@ -43,3 +106,5 @@ document.addEventListener("DOMContentLoaded", function () {
         question.parentNode.replaceChild(panelDiv, question);
     });
 });
+
+

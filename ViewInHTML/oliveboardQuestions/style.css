@@ -12,3 +12,117 @@
     page-break-inside: avoid; /* Prevent breaking within a question */
     break-inside: avoid; /* Modern equivalent */
 }
+
+
+/* Base Page & Print Setup */
+
+/*
+    .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 12mm;
+        margin: 10mm auto;
+        background: white;
+        box-sizing: border-box;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+        */
+
+    /* Header Styling */
+    .exam-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #333;
+        margin-top: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .header-info h2 { margin: 0; font-size: 18px; text-transform: uppercase; }
+    .header-info p { margin: 5px 0; font-weight: bold; font-size: 13px; }
+
+    /* Two-Column Grid Logic */
+    /*
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        position: relative;
+    }
+        */
+
+    /* Vertical Divider Line */
+    /*
+    .main-content::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        border-left: 1px dashed #bbb;
+    }
+    */
+
+    /* Question Formatting */
+    .question-outer-div {
+        margin-bottom: 25px;
+        page-break-inside: avoid;
+        font-size: 13px;
+    }
+
+    table[name^="myquestion"] {
+        width: 100% !important;
+        display: table !important;
+    }
+
+    .eqt p, .hqt p { margin: 0 0 8px 0; line-height: 1.5; }
+    .hqt { color: #444; font-style: normal; display: block; margin-bottom: 10px; }
+
+    /* Options Grid (2x2 Layout) */
+    .opts-table tbody {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+    }
+
+    .opts-table tr { display: flex; align-items: flex-start; }
+    
+    /* Footer Styling */
+    /*
+    .footer {
+        position: absolute;
+        bottom: 8mm;
+        left: 12mm;
+        right: 12mm;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        padding-top: 5px;
+        font-size: 10px;
+        color: #555;
+    }
+        */
+
+    /* Buttons & Print UI */
+    .print-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background: #2c3e50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        font-weight: bold;
+    }
+
+    @media print {
+        .print-btn { display: none; }
+        body { background: none; }
+        .page { margin: 0; box-shadow: none; width: 100%; }
+        #question-inner-pane { display: block !important; } /* Fix for some print engines */
+    }
